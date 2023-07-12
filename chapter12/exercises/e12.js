@@ -60,13 +60,14 @@ let crew = [superChimpOne, salamander, superChimpTwo, dog, waterBear];
 // Print out the relevant information about each animal.
 
 function crewReports(testObj) {
-    for (i = 0; i < testObj.length; i++) {
+    let i = 0
+    while ( i < testObj.length) {
         console.log(`${testObj[i].name} is a ${testObj[i].species}. They are ${testObj[i].age} years old and ${testObj[i].mass} kilograms. Their ID is ${testObj[i].astronautID}.`);
+        i++
     }
-    // console.log(`${testObj.name} is a ${testObj.species}. They are ${testObj.age} years old and ${testObj.mass} kilograms. Their ID is ${testObj.astronautID}.`);
 }
 
-crewReports(crew);
+console.log(crewReports(crew));
 
 function fitnessTest(racer) {
     let results = [], numSteps, turns;
@@ -81,4 +82,4 @@ function fitnessTest(racer) {
     }
     return results;
 }
-fitnessTest(crew);
+console.log(fitnessTest(crew));
